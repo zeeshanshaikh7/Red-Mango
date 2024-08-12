@@ -6,7 +6,7 @@ export const paymentApi = createApi({
   reducerPath: "paymentApi",
   baseQuery: fetchBaseQuery({
     baseUrl,
-    prepareHeaders: (headers: Headers, api) => {
+    prepareHeaders: (headers: Headers) => {
       const token = localStorage.getItem("token");
       token && headers.append("Authorization", "Bearer " + token);
     },

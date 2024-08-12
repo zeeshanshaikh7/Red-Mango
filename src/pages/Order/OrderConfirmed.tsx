@@ -1,4 +1,3 @@
-import React from 'react'
 import confirmed from '../../assets/Images/confirmed.jpg'
 import { useParams } from 'react-router-dom'
 

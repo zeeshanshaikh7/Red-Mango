@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { inputHelper } from '../Helper'
 import { useLoginUserMutation } from '../API'
 import { apiResponse, userModel } from '../interfaces';
-import { MainLoader, MiniLoader } from '../components/pages/common';
+import { MainLoader } from '../components/pages/common';
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from 'react-redux';
 import { setLoggedInUser } from '../Storage';

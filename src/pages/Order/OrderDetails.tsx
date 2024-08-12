@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom"
 import { useGetOrderDetailsQuery } from "../../API/orderApi";
 import { OrderSummary } from "../../components/pages/Orders";
+import { orderDetailsDataModel } from "../../interfaces";
 
 function OrderDetails() {
     const { id } = useParams();
     const { data, isLoading } = useGetOrderDetailsQuery(id);
     let userInput = { name: "", email: "", phoneNumber: "" };
-    let orderDetail = { id: 0, cartItems: [], cartTotal: 0, status: "" };
+    let orderDetail : orderDetailsDataModel= { id: 0, cartItems: [], cartTotal: 0 , status:undefined  };
     if (!isLoading && data?.result) {
         console.log(data.result[0]);
         userInput = {
@@ -21,7 +22,6 @@ function OrderDetails() {
             cartTotal: data.result[0].orderTotal,
             status: data.result[0].status
         }
-        console.log(orderDetail);
 
     }
 

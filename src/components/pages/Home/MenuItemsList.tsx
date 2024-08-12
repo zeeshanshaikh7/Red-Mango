@@ -3,7 +3,7 @@ import { menuItemModel } from '../../../interfaces'
 import { MenuCards } from './'
 import { useGetMenuItemsQuery } from '../../../API'
 import { useDispatch, useSelector } from 'react-redux'
-import { RootState, setMenuItem, setSearchItem } from '../../../Storage'
+import { RootState, setMenuItem } from '../../../Storage'
 import { MainLoader } from '../common'
 import { SD_SortTypes } from '../../../Utilities/SD'
 
