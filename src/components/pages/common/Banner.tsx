@@ -26,11 +26,13 @@ function Banner() {
                     <input
                         value={value}
                         onChange={handleChange}
-                        type={"text"}
+                        type="text"
                         className="form-control rounded-pill"
                         style={{
-                            width: "100%",
-                            padding: "20px 20px",
+                            width: "100%",  // Full width of the parent container
+                            padding: "15px 20px",  // Adjusted padding for smaller screens
+                            maxWidth: "400px",  // Optional: Limit maximum width for larger screens
+                            minWidth: "200px",  // Optional: Limit minimum width for smaller screens
                         }}
                         placeholder="Search for Food Items!"
                     />
